@@ -1,0 +1,78 @@
+
+.hidden_box input#label1:checked ~ #hidden_show_wrap #div_1 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+.hidden_box input#label1:checked ~ #hidden_show_wrap #div_1 .title h2 span {
+  display: block;
+  animation: typewriter 0.2s 0.1s forwards;
+}
+.hidden_box input#label1:checked ~ #hidden_show_wrap #div_1 .text p {
+  display: block;
+  opacity: 0;
+  animation: show_text 0.5s 0.5s forwards;
+}
+.hidden_box input#label1:checked ~ #label_wrap label#for_1 span {
+  border-bottom: solid 3px #989898;
+  animation: show_under_line 0.2s 0.1s forwards;
+}
+.hidden_box input#label2:checked ~ #hidden_show_wrap #div_2 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+.hidden_box input#label2:checked ~ #hidden_show_wrap #div_2 .title h2 span {
+  display: block;
+  animation: typewriter 0.2s 0.1s forwards;
+}
+.hidden_box input#label2:checked ~ #hidden_show_wrap #div_2 .text p {
+  display: block;
+  opacity: 0;
+  animation: show_text 0.5s 0.5s forwards;
+}
+.hidden_box input#label2:checked ~ #label_wrap label#for_2 span {
+  border-bottom: solid 3px #989898;
+  animation: show_under_line 0.2s 0.1s forwards;
+}
+.hidden_box input#label3:checked ~ #hidden_show_wrap #div_3 {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+    display: block;
+}
+.hidden_box input#label3:checked ~ #hidden_show_wrap #div_3 .title h2 span {
+  display: block;
+  animation: typewriter 0.2s 0.1s forwards;
+}
+.hidden_box input#label3:checked ~ #hidden_show_wrap #div_3 .text p {
+  display: block;
+  opacity: 0;
+  animation: show_text 0.5s 0.5s forwards;
+}
+.hidden_box input#label3:checked ~ #label_wrap label#for_3 span {
+  border-bottom: solid 3px #989898;
+  animation: show_under_line 0.2s 0.1s forwards;
+}
+@keyframes show_h2_animation {
+    0% {transform:scaleX(0.8); opacity: 0;}
+    100% {transform:scaleX(1); opacity: 1;}
+}
+@keyframes typewriter{
+  from{width: 0; opacity: 0;}
+  to{width: 100%; opacity: 1;}
+}
+@keyframes show_under_line{
+  from{width: 0; opacity: 0;}
+  to{width: 30px; opacity: 1;}
+}
+@keyframes show_text {
+0% {
+ opacity: 0;
+ transform: translateX(-30px);
+}
+ 100% {
+  opacity: 1;
+  transform: translateX(0);
+ } 
+}

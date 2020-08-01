@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>about senrai</title>
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset-plus-tool/dist/reset.min.css" />
+    <link href="/css/parts.css" rel="stylesheet" type="text/css" />
+    <link href="/about/style.css" rel="stylesheet" type="text/css" />
+    <link href="/icomoon/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  </head>
+  <body>
+    <header id="header" class="bg_on">
+      <a href="/" id="senrai_title">Senrai</a>
+      <span id="sidemenu" class="menu"><hr><hr><hr></span>
+      <div id="sidemenu_wrap" class="side_none"></div>
+    </header>
+    <main>
+      <h1>about Senrai</h1>
+      <div class="hidden_box">
+        <input type="radio" name="show" id="label1"/>
+        <input type="radio" name="show" id="label2"/>
+        <input type="radio" name="show" id="label3"/>
+        <div id="label_wrap">
+          <label for="label1" id="for_1" onclick="">what's lmGroup<span></span></label>
+          <label for="label2" id="for_2" onclick="">keyword<span></span></label>
+          <label for="label3" id="for_3" onclick="">message<span></span></label>
+        </div>
+        <div id="hidden_show_wrap">
+          <div class="hidden_show" id="div_1">
+            <div id="what" class="div_wrap">
+              <div class="title">
+                <h2 class="test2"><span>what's Senrai</span></h2>
+              </div>
+              <div class="text">
+                <p>Senraiはあったらいいなできたらいいな。漫画で見たなんちゃらポケットのように欲しかったものがある、夢を実現できる。未来と過去を移動することはできないけれども、使用者の皆様に寄り添って。</p>
+                <p>この時代いろいろな人が自ら情報を発信し自ら生み出すことができる。そんな時代を生きる私たちになにができるのか、日々考えながら開発を進めていきます。</p>
+              </div>
+            </div>
+          </div>
+          <div class="hidden_show" id="div_2">
+            <div id="catchcopy" class="div_wrap">
+              <div class="title">
+                <h2 class="test2"><span>through Z</span></h2>
+              </div>
+              <div class="text">
+                <p>
+                  <span>through Z</span>
+                これは私たちのキーワードです。Zというもじはアルファベット最後の文字です。このZという文字はすべての最後ということだけでなく無限の可能性という意味を持っています。この無限の可能性の向こう側へと私たちは進んでいきます。</p>
+              </div>
+            </div>
+          </div>
+          <div class="hidden_show" id="div_3">
+            <div id="catchcopy" class="div_wrap">
+              <div class="title">
+                <h2 class="test2"><span>message</span></h2>
+              </div>
+              <div class="text">
+                <p>
+                  <span>through Z</span>
+                これは私たちのキーワードです。Zというもじはアルファベット最後の文字です。このZという文字はすべての最後ということだけでなく無限の可能性という意味を持っています。この無限の可能性の向こう側へと私たちは進んでいきます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer"></div>
+    </footer>
+    <script>
+      var hash = location.hash;
+      console.log(hash);
+      if (hash == "#what") {
+        document.getElementById("label1").checked = true;
+      } else if (hash == "#keyword") {
+        document.getElementById("label2").checked = true;
+      } else if (hash == "#message") {
+        document.getElementById("label3").checked = true;
+      } else {
+        document.getElementById("label1").checked = true;
+      }
+      window.onload = function() {
+        const delaycss = document.createElement('link');
+        delaycss.rel = 'stylesheet';
+        delaycss.href = '/about/action.css';
+        document.head.appendChild(delaycss);
+      }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/template.js"></script>
+  </body>
+</html>

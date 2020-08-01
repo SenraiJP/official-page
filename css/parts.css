@@ -1,0 +1,205 @@
+@font-face {
+  font-family: 'Bersambung_IWK';
+  src: url("/fonts/Tegak Bersambung_IWK/Tegak Bersambung_IWK.woff2") format('woff2'),
+  url("/fonts/Tegak Bersambung_IWK/Tegak Bersambung_IWK.woff") format('woff');
+}
+#UMS_TOOLTIP img,
+#TSRToolTipBodyContent img,
+#TSRToolTipCloseSpan img,
+#TSRToolTipTitle img {
+  filter: blur(0px);
+}
+h1, h2, h3, p, a, li, label, td {font-family: "M PLUS 1p", "源真ゴシック", "Helvetica Neue",Helvetica,Arial, YuGothic, 'Yu Gothic', 游ゴシック体, '游ゴシック', "ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ", Meiryo,"MS ゴシック","MS Gothic",sans-serif;}
+.senrai_logo {font-family: 'Bersambung_IWK', sans-serif; font-size: 2em;}
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  padding: 5px 20px;
+  z-index: 9999;
+}
+header a {color: #000; text-decoration: none;}
+.bg_off {animation: bg_off_animation 0.3s ease-in reverse forwards;}
+.bg_on {animation: bg_on_animation 0.3s ease-in forwards;}
+@keyframes bg_on_animation {
+  0% {background-color: rgba(255,255,255,0);}
+  100% {background-color: #fff;}
+}
+header a#senrai_title {
+  font-family: 'Bersambung_IWK', sans-serif;
+  font-size: 3em;
+  width: auto;
+  position: fixed;
+  top: 0;
+  left: 10px;
+}
+header #senrai_title, header .menu {
+  display: inline-block;
+}
+.menu{
+  display: block;
+  width: 50px;/*枠の大きさ*/
+  height: 50px;/*枠の大きさ*/
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 810;
+}
+.menu hr{
+  display: block;
+  margin: 0;
+  border: none;
+  width: 50%;/*バツ線の長さ*/
+  height: 4px;/*バツ線の太さ*/
+  background: #000;
+  transform-origin:0% 50%;
+  position: absolute;
+  top: 12px;
+  left: 25%;
+  transition: .3s;
+}
+.menu hr:nth-of-type(2){top: 22px;}
+.menu hr:nth-of-type(3){top: 32px;}
+.close hr{left: 30%;}
+.close hr:nth-of-type(1){
+  transform: rotate(45deg);
+  width: 55%;
+}
+.close hr:nth-of-type(2){opacity: 0;}
+.close hr:nth-of-type(3){
+  top: 32px;
+  transform: rotate(-45deg);
+  width: 55%;
+}
+header .side_none {display: none;}
+header .side_show {
+  display: block;
+  opacity: 0;
+  animation: op_an 0.2s ease-in forwards;
+}
+header #more_about {display: none;}
+footer {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: lightgray;
+}
+footer .link_line{
+  width: calc(25% - 10px);
+  margin-left: 10px;
+  display: inline-block;
+}
+footer p, footer a {
+  display: block;
+  color: #fff;
+}
+footer a .icon-twitter::before,
+footer a .icon-youtube::before {color: #fff;}
+footer p {font-size: 1.1em;}
+footer #page_map {margin: 5px;}
+footer #snslink a {
+  width: 100%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+footer #twitter_panel {background-color: #1da1f2;}
+footer #youtube_panel {background-color: #ff0000;}
+.fa-twitter,　.fa-youtube {
+  font-size: 1.2em;
+  color: #fff;
+}
+@media screen and (max-width: 300px) {
+  .sp_none {
+    display: none;
+  }
+}
+footer .link_line{
+  margin-left: 10px;
+  display: inline-block;
+}
+#sidemenu_wrap {
+  background-color: #fff;
+  position: fixed;
+  z-index: 800;
+}
+#sidemenu_wrap #sidemenu_lis {text-align: center;}
+#sidemenu_wrap #sidemenu_lis li {display: inline-block;}
+#sidemenu_wrap #sidemenu_lis li a {
+  display: block;
+  color: #000;
+  margin: 10px;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+@media screen and (max-width: 539px) {
+  footer .link_line{
+    width: calc(100% - 20px);
+  }
+  footer #snslink a {
+    font-size: 0.9em;
+  }
+  #sidemenu_wrap {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: op_an 0.2s ease-in forwards;
+  }
+  #sidemenu_wrap #sidemenu_lis {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+  }
+}
+@media screen and (max-width: 976px) and (min-width: 541px) {
+  footer .link_line{ width: calc(50% - 20px);}
+  footer #snslink {width: calc(100% - 20px);}
+}
+@media screen and (min-width: 540px) {
+  .menu{
+    background-color: #fff;
+    border-radius: 50px;
+  }
+  #sidemenu_wrap {
+    height: 50px;
+    width: calc(100% - 200px);
+    top: 10px;
+    right: 10px;
+    border-radius: 50px;
+    animation: side_animation_show_pc 0.2s ease-in forwards;
+  }
+  #sidemenu_wrap #sidemenu_lis {
+    text-align: center;
+    position: fixed;
+    top: 10px;
+    right: auto;
+  }
+  #sidemenu_wrap #sidemenu_lis li a {animation: side_animation 0.6s ease-in forwards;}
+  #sidemenu_wrap #sidemenu_lis li a#about:hover ~ #more_about {
+    display: block;
+    animation: op_an 0.6s ease-in forwards;
+  }
+}
+@keyframes side_animation_show_pc {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  40% {
+    opacity: 0;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 400px;
+  }
+}
+@keyframes op_an {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}

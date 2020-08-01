@@ -1,0 +1,74 @@
+#slider {position: relative;}
+.sl_bt {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-left: 3px solid #999;
+  border-bottom: 3px solid #999;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform : translateY(-50%);
+  transform : translateY(-50%);
+}
+#slide_left_button {left: 20px; transform : rotate(45deg);}
+#slide_right_button {right: 20px; transform : rotate(225deg);}
+#slides {width:100%; height: 300px;}
+.slide_no {position: absolute; top: 0; left: 0;}
+.top_slide {z-index: 998; background-color: red;}
+#slides a {width: 100%; height: 100%;}
+#slide0, #slide1, #slide2, #slide3{background-color: lightblue;}
+.slide_none {display: none;}
+.slide_show {display: inline-block;}
+main {width: 80%; margin: 0 10%;}
+.contents {width: 100%;}
+#product_contents＿flex {display: flex;flex-wrap : wrap;}
+.content {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(135deg, rgba(138, 140, 199, 0.6), rgba(65, 0, 151, 0.8));
+  background: -moz-linear-gradien(135deg, rgba(138, 140, 199, 0.6), rgba(65, 0, 151, 0.8));
+  background: linear-gradient(135deg, rgba(138, 140, 199, 0.6), rgba(65, 0, 151, 0.8));
+  background-size: cover;
+  color: #fff;
+}
+#content_coming_soon {text-align: center;}
+#news_contents_list li {
+  list-style-type: none;
+  color: #000;
+  border-bottom: solid 1px #111;
+  margin-bottom: 5px;
+}
+#news_contents_list li .day_cat {
+  font-weight: 400;
+  text-align: center;
+}
+#news_contents_list li .news_txt {
+  font-weight: 300;
+  text-align: left;
+}
+#news_contents_list li:hover {
+  transform: scale(1.01, 1.01);
+  box-shadow: 1px 1px 10px -5px;
+}
+#news_contents_list li a {color: #000;}
+@media screen and (max-width: 799px) {
+  .content {width: 100%;}
+  #news_contents_list li p {padding: 1px 0;text-align: left;}
+  #news_contents_list li .day_cat {width: auto;display: inline-block;}
+  #news_contents_list li .news_txt {width: 100%;}
+}
+@media screen and (min-width: 800px) {
+  .content {width: calc(50% - 20px);}
+  #news_contents_list li p {
+    padding: 5px 0;
+    display: inline-block;
+  }
+  #news_contents_list li .day_cat {
+    width: 10em;
+  }
+  #news_contents_list li .news_txt {
+    width: calc(100% - 21em);
+  }
+}
