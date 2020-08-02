@@ -133,7 +133,7 @@ footer .link_line{
   font-size: 1.2em;
   font-weight: 300;
 }
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 669px) {
   footer .link_line{
     width: calc(100% - 20px);
   }
@@ -160,7 +160,7 @@ footer .link_line{
   footer .link_line{ width: calc(50% - 20px);}
   footer #snslink {width: calc(100% - 20px);}
 }
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 670px) {
   .menu{
     background-color: #fff;
     border-radius: 50px;
@@ -195,7 +195,7 @@ footer .link_line{
   }
   100% {
     opacity: 1;
-    width: 440px;
+    width: 470px;
   }
 }
 @keyframes op_an {

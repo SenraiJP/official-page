@@ -62,6 +62,10 @@
   content: "\e90c";
   color: #f7df1e;
 }
+.icon-line:before {
+  content: "\e90f";
+  color: #00c300;
+}
 .icon-netlify:before {
   content: "\e903";
   color: #00c7b7;
