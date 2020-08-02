@@ -167,7 +167,6 @@ footer .link_line{
   }
   #sidemenu_wrap {
     height: 50px;
-    width: calc(100% - 200px);
     top: 10px;
     right: 10px;
     border-radius: 50px;
@@ -196,7 +195,7 @@ footer .link_line{
   }
   100% {
     opacity: 1;
-    width: 400px;
+    width: 440px;
   }
 }
 @keyframes op_an {
