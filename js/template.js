@@ -1,3 +1,5 @@
+var vh=window.innerHeight;
+document.documentElement.style.setProperty('--height',vh/100+'px');
 var checker = 0;
 let d = document;
 const s_b = d.getElementById("sidemenu");
